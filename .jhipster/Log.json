@@ -1,0 +1,34 @@
+{
+  "applications": "*",
+  "changelogDate": "20230523001229",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "log",
+  "fields": [
+    {
+      "fieldName": "entry",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Log",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "game",
+      "otherEntityRelationshipName": "log",
+      "ownerSide": true,
+      "relationshipName": "game",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "profile",
+      "otherEntityRelationshipName": "log",
+      "relationshipName": "profile",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

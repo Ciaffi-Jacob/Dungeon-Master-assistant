@@ -1,0 +1,169 @@
+{
+  "applications": "*",
+  "changelogDate": "20230523001232",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "jhi_character",
+  "fields": [
+    {
+      "fieldName": "uid",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "level",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "strength",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "strengthProficiency",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "dexterity",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "dexterityProficiency",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "constitution",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "constitutionProficiency",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "intelligence",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "intelligenceProficiency",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "charisma",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "charismaProficiency",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "wisdom",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "wisdomProficiency",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "passiveInsight",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "passivePerception",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "acrobatics",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "animalHandling",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "arcana",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "athletics",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "deception",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "history",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "insight",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "intimidation",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "investigation",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "medicine",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "nature",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "perception",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "performance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "persuasion",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "religion",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "sleightOfHand",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "stealth",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "survival",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Character",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "game",
+      "otherEntityRelationshipName": "character",
+      "relationshipName": "game",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "profile",
+      "otherEntityRelationshipName": "character",
+      "relationshipName": "profile",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

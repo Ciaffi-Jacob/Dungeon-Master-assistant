@@ -1,0 +1,64 @@
+//Characters that user creates
+//jhipsters comes with users with username password and uid
+
+entity Log{
+	entry String
+}
+entity Profile{
+	userName String
+    password String
+    uid Long
+}
+entity Game{
+	uid Long //first user id is the DM, the rest are players
+}
+
+entity Character {
+	uid Long //id of user to link characters to account
+	name String
+    level Integer
+	strength Integer
+    strengthProficiency Boolean
+    dexterity Integer
+    dexterityProficiency Boolean
+    constitution Integer
+    constitutionProficiency Boolean
+    intelligence Integer
+    intelligenceProficiency Boolean
+    charisma Integer
+    charismaProficiency Boolean
+    wisdom Integer
+    wisdomProficiency Boolean
+    passiveInsight Integer
+    passivePerception Integer
+    acrobatics Boolean
+	animalHandling Boolean
+	arcana Boolean
+	athletics Boolean
+	deception Boolean
+	history Boolean
+	insight Boolean
+	intimidation Boolean
+	investigation Boolean
+	medicine Boolean
+	nature Boolean
+	perception Boolean
+	performance Boolean
+	persuasion Boolean
+	religion Boolean
+	sleightOfHand Boolean
+	stealth Boolean
+	survival Boolean
+}
+relationship OneToMany {
+  Game to Character
+}
+relationship OneToOne{
+	Log to Game
+}
+relationship OneToMany{
+	Profile to Log
+}
+relationship OneToMany{
+	Profile to Character
+}

@@ -1,0 +1,34 @@
+{
+  "applications": "*",
+  "changelogDate": "20230523001231",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "game",
+  "fields": [
+    {
+      "fieldName": "uid",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Game",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "character",
+      "otherEntityRelationshipName": "game",
+      "relationshipName": "character",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "log",
+      "otherEntityRelationshipName": "game",
+      "ownerSide": false,
+      "relationshipName": "log",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}

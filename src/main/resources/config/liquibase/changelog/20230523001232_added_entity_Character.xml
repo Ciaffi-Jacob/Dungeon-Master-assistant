@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Character.
+    -->
+    <changeSet id="20230523001232-1" author="jhipster">
+        <createTable tableName="jhi_character">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="uid" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="level" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="strength" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="strength_proficiency" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="dexterity" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="dexterity_proficiency" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="constitution" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="constitution_proficiency" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="intelligence" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="intelligence_proficiency" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="charisma" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="charisma_proficiency" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="wisdom" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="wisdom_proficiency" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="passive_insight" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="passive_perception" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="acrobatics" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="animal_handling" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="arcana" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="athletics" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="deception" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="history" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="insight" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="intimidation" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="investigation" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="medicine" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="nature" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="perception" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="performance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="persuasion" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="religion" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="sleight_of_hand" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="stealth" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="survival" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="game_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="profile_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20230523001232-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/jhi_character.csv"
+                  separator=";"
+                  tableName="jhi_character"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="uid" type="numeric"/>
+            <column name="name" type="string"/>
+            <column name="level" type="numeric"/>
+            <column name="strength" type="numeric"/>
+            <column name="strength_proficiency" type="boolean"/>
+            <column name="dexterity" type="numeric"/>
+            <column name="dexterity_proficiency" type="boolean"/>
+            <column name="constitution" type="numeric"/>
+            <column name="constitution_proficiency" type="boolean"/>
+            <column name="intelligence" type="numeric"/>
+            <column name="intelligence_proficiency" type="boolean"/>
+            <column name="charisma" type="numeric"/>
+            <column name="charisma_proficiency" type="boolean"/>
+            <column name="wisdom" type="numeric"/>
+            <column name="wisdom_proficiency" type="boolean"/>
+            <column name="passive_insight" type="numeric"/>
+            <column name="passive_perception" type="numeric"/>
+            <column name="acrobatics" type="boolean"/>
+            <column name="animal_handling" type="boolean"/>
+            <column name="arcana" type="boolean"/>
+            <column name="athletics" type="boolean"/>
+            <column name="deception" type="boolean"/>
+            <column name="history" type="boolean"/>
+            <column name="insight" type="boolean"/>
+            <column name="intimidation" type="boolean"/>
+            <column name="investigation" type="boolean"/>
+            <column name="medicine" type="boolean"/>
+            <column name="nature" type="boolean"/>
+            <column name="perception" type="boolean"/>
+            <column name="performance" type="boolean"/>
+            <column name="persuasion" type="boolean"/>
+            <column name="religion" type="boolean"/>
+            <column name="sleight_of_hand" type="boolean"/>
+            <column name="stealth" type="boolean"/>
+            <column name="survival" type="boolean"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

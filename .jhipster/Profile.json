@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20230523001230",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "profile",
+  "fields": [
+    {
+      "fieldName": "userName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "uid",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Profile",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "log",
+      "otherEntityRelationshipName": "profile",
+      "relationshipName": "log",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "character",
+      "otherEntityRelationshipName": "profile",
+      "relationshipName": "character",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}
