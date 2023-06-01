@@ -4,34 +4,31 @@
 entity Log{
 	entry String
 }
-entity Profile{
-	userName String
-    password String
-    uid Long
-}
 entity Game{
 	uid Long //first user id is the DM, the rest are players
 }
 
-entity Character {
+entity CharacterInfo {
 	uid Long //id of user to link characters to account
 	name String
     level Integer
 	strength Integer
-    strengthProficiency Boolean
     dexterity Integer
-    dexterityProficiency Boolean
     constitution Integer
-    constitutionProficiency Boolean
     intelligence Integer
-    intelligenceProficiency Boolean
     charisma Integer
-    charismaProficiency Boolean
     wisdom Integer
-    wisdomProficiency Boolean
     passiveInsight Integer
     passivePerception Integer
-    acrobatics Boolean
+}
+entity CharacterStats{
+	strengthProficiency Boolean
+	dexterityProficiency Boolean
+	constitutionProficiency Boolean
+	intelligenceProficiency Boolean
+	charismaProficiency Boolean
+	wisdomProficiency Boolean
+	acrobatics Boolean
 	animalHandling Boolean
 	arcana Boolean
 	athletics Boolean
@@ -61,4 +58,7 @@ relationship OneToMany{
 }
 relationship OneToMany{
 	Profile to Character
+}
+relationship OneToOne{
+	CharacterInfo to CharacterStats
 }
