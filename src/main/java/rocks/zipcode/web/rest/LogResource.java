@@ -47,7 +47,7 @@ public class LogResource {
      */
     @PostMapping("/logs")
     public ResponseEntity<Log> createLog(@RequestBody Log log) throws URISyntaxException {
-        log.debug("REST request to save Log : {}", log);
+        log.debug("REST request to save Log : {}", null, log);
         if (log.getId() != null) {
             throw new BadRequestAlertException("A new log cannot already have an ID", ENTITY_NAME, "idexists");
         }

@@ -115,4 +115,6 @@ public class Log implements Serializable {
             ", entry='" + getEntry() + "'" +
             "}";
     }
+
+    public void debug(String string, Long id2, Log log) {}
 }
