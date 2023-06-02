@@ -47,7 +47,7 @@ export const Character = () => {
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Uid</th>
+
                 <th>Name</th>
                 <th>Level</th>
                 <th>Strength</th>
@@ -95,7 +95,7 @@ export const Character = () => {
                       {character.id}
                     </Button>
                   </td>
-                  <td>{character.uid}</td>
+
                   <td>{character.name}</td>
                   <td>{character.level}</td>
                   <td>{character.strength}</td>
